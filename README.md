@@ -5,6 +5,7 @@
 [![npm][npm-badge]][npm]
 [![Docs][typedoc-badge]][docs]
 [![CI][ci-badge]][ci]
+[![codecov][codecov-badge]][codecov]
 
 ## License
 
@@ -12,6 +13,8 @@
 
 [ci]: https://github.com/teatimeguest/node-ctan/actions/workflows/ci.yml
 [ci-badge]: https://github.com/teatimeguest/node-ctan/actions/workflows/ci.yml/badge.svg?branch=main
+[codecov]: https://codecov.io/gh/teatimeguest/node-ctan
+[codecov-badge]: https://codecov.io/gh/teatimeguest/node-ctan/branch/main/graph/badge.svg?token=IJ2XRMIPL2
 [ctan]: https://www.ctan.org/
 [docs]: https://teatimeguest.github.io/node-ctan/latest
 [license]: https://github.com/teatimeguest/node-ctan/blob/main/LICENSE
