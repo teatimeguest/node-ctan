@@ -1,0 +1,5 @@
+/.config/patches/*.patch -merge -text
+/.config/widdershins/* linguist-language=text
+/docs/**/*.md linguist-generated=true -diff
+dprint.json linguist-language=jsonc
+package-lock.json linguist-generated=true -diff -merge

@@ -1,0 +1,10 @@
+{
+  "cleanOutputDir": true,
+  "entryPoints": ["../src/index.ts"],
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "includeVersion": true,
+  "readme": "none",
+  "treatWarningsAsErrors": true,
+  "visibilityFilters": {}
+}

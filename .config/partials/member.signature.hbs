@@ -1,0 +1,89 @@
+> <b>
+>
+> ```typescript
+> {{{signatureTitle accessor}}}
+> ```
+>
+> </b>
+{{#if showSources}}{{> member.sources}}{{/if}}
+
+{{{summary comment}}}
+
+<dl>
+{{#if typeParameters~}}
+
+<dt>Type Parameters</dt>
+
+{{~#with typeParameters}}
+<dd><p>
+
+{{{typeParameterTable}}}
+
+</p></dd>
+{{/with~}}
+
+{{/if~}}
+
+{{#if parameters~}}
+
+<dt>Parameters</dt>
+
+{{~#with parameters}}
+<dd><p>
+
+{{{parameterTable}}}
+
+</p></dd>
+{{/with~}}
+
+{{/if~}}
+
+{{#ifShowReturns~}}
+
+<dt>Returns</dt>
+<dd><p>
+
+{{#if type}}
+
+{{#with type}}
+
+<code>{{{type 'all'}}}</code>
+
+{{/with}}
+
+{{#with comment}}
+
+{{{returns this}}}
+
+{{/with}}
+
+{{#with type}}
+
+{{#if declaration.signatures}}
+
+{{#each declaration.signatures}}
+
+{{> member.signature showSources=false }}
+
+{{/each}}
+
+{{/if}}
+
+{{#if declaration.children}}
+
+{{#with declaration.children}}
+
+{{{propertyTable}}}
+
+{{/with}}
+
+{{/if}}
+
+{{/with}}
+
+{{/if}}
+
+{{/ifShowReturns}}
+</p></dd>
+{{{tags comment}}}
+</dl>

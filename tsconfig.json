@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "strict": true,
+    "baseUrl": "./src",
+    "module": "es2020",
+    "moduleResolution": "node",
+    "paths": { "#/*": ["*"] },
+    "rootDirs": ["./src"],
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "importHelpers": true,
+    "newLine": "lf",
+    "outDir": "./dist/esm",
+    "removeComments": true,
+    "stripInternal": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "target": "es2020",
+    "plugins": [
+      { "transform": "ts-transformer-keys/transformer" },
+      { "transform": "typescript-transform-paths", "useRootDirs": true },
+      {
+        "transform": "typescript-transform-paths",
+        "useRootDirs": true,
+        "afterDeclarations": true
+      }
+    ]
+  },
+  "include": ["./src/**/*.ts"]
+}

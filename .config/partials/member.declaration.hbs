@@ -1,0 +1,106 @@
+> <b>
+>
+> ```typescript
+> {{{declarationTitle}}}
+> ```
+>
+> </b>
+{{> member.sources}}
+
+{{{summary comment}}}
+
+<dl>
+{{#if typeParameters~}}
+
+<dt>Type Parameters</dt>
+
+{{~#with typeParameters}}
+<dd><p>
+
+{{{typeParameterTable}}}
+
+</p></dd>
+{{/with~}}
+
+{{/if~}}
+
+{{#if type.declaration~}}
+
+{{#if type.declaration.indexSignature~}}
+
+{{#with type.declaration.indexSignature~}}
+
+<dt>Index Signature</dt>
+<dd><p>
+
+{{{indexSignatureTitle}}}
+
+{{{summary comment}}}
+
+{{> comment}}
+
+</p></dd>
+{{/with~}}
+
+{{/if~}}
+
+{{#if type.declaration.signatures~}}
+
+{{#if type.declaration.children~}}
+
+<dt>Call Signature</dt>
+
+{{~else~}}
+
+<dt>Type Declaration</dt>
+
+{{~/if}}
+<dd><p>
+
+{{#each type.declaration.signatures}}
+
+{{> member.signature showSources=false }}
+
+{{/each}}
+
+</p></dd>
+{{/if~}}
+
+{{#if type.declaration.children~}}
+
+{{#with type.declaration~}}
+
+<dt>Type Declaration</dt>
+
+{{~#with children}}
+<dd><p>
+
+{{{propertyTable}}}
+
+</p></dd>
+{{/with~}}
+
+{{/with~}}
+
+{{/if~}}
+
+{{else~}}
+
+{{#each (typeReferences)}}
+{{#if @first}}
+<dt>Type References</dt>
+<dd><p>
+
+{{/if~}}
+
+- [{{name}}]({{url}})
+
+{{#if @last}}
+
+</p></dd>
+{{/if~}}
+{{/each~}}
+
+{{/if~}}
+{{{tags comment}}}
+</dl>

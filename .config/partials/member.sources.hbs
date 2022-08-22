@@ -1,0 +1,37 @@
+{{#if implementationOf}}
+>
+> **Implementation of:** {{#with implementationOf~}} {{{path}}} {{~/with}}
+>
+{{/if~}}
+
+{{#if inheritedFrom}}
+>
+> **Inherited from:** {{#with inheritedFrom~}} {{{path}}} {{~/with}}
+>
+{{/if~}}
+
+{{#if overwrites}}
+>
+> **Overrides:** {{#with overwrites~}} {{{path}}} {{~/with}}
+>
+{{/if~}}
+
+{{#if sources~}}
+
+{{#each sources}}
+>
+> **Defined in:**{{' '}}
+
+{{~#if url~}}
+
+[{{fileName}}:{{line}}]({{url}})
+
+{{~else~}}
+
+{{fileName}}:{{line}}
+
+{{~/if}}
+>
+{{/each}}
+
+{{~/if}}

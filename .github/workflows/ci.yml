@@ -1,0 +1,28 @@
+name: CI
+
+permissions: read-all
+
+on:
+  push:
+    branches: main
+  pull_request:
+
+jobs:
+  ci:
+    strategy:
+      matrix:
+        script: [format-check, lint, 'test:coverage']
+      fail-fast: false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run ${{ matrix.script }}
+      - if: github.event_name == 'push' && matrix.script == 'test:coverage'
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "importHelpers": false,
+    "noEmit": true,
+    "rootDirs": ["./src", "./__tests__"]
+  },
+  "include": ["./src/**/*.ts", "./__tests__/**/*.ts"]
+}
