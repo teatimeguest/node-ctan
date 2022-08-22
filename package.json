@@ -1,7 +1,7 @@
 {
   "name": "ctan",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "@teatimeguest",
   "description": "CTAN (Comprehensive TeX Archive Network) API client for Node.js",
   "license": "MIT",
