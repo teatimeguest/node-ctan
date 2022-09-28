@@ -18,7 +18,7 @@ module.exports = {
       const { url } = JSON.parse(
         execFileSync('npm', ['repo', '--browser=false', '--json']),
       );
-      return path.posix.join(url, 'blob', tag, '/');
+      return `${url}/blob/${tag}/`;
     },
   },
   out: path.join(publicdir, tag),

@@ -12,7 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - run: |
+          git for-each-ref 'refs/tags/${{ github.ref_name }}' \
+            --format='%(contents:body)' > RELEASENOTES.md
       - uses: softprops/action-gh-release@v1
+        with:
+          body_path: RELEASENOTES.md
 
   publish:
     runs-on: ubuntu-latest

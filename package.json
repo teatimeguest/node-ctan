@@ -36,7 +36,7 @@
     "test": "jest -c .config/jest.config.mjs",
     "test:coverage": "npm test -- --coverage",
     "type-check": "ttsc --noEmit",
-    "version": "npm run build-docs && bash scripts/bump-version.sh"
+    "version": "bash scripts/bump-version.sh"
   },
   "engines": {
     "node": ">=14.13.1"
