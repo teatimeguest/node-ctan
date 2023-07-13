@@ -64,7 +64,7 @@ export interface Copyright {
   /**
    * The year or years of the copyright.
    */
-  year: string | null;
+  year?: string | null;
 }
 
 /**

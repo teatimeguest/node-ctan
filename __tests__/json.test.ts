@@ -17,6 +17,7 @@ beforeAll(async () => {
     config: {
       checkSecurity: false,
       errors: false,
+      isProxy: false,
       mock: { dynamic: true },
       upstreamProxy: undefined,
       validateRequest: true,

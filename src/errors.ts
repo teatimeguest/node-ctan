@@ -9,14 +9,6 @@ export abstract class CtanError extends Error {
   }
 }
 
-export interface CtanError {
-  cause?: Error;
-}
-
-export interface ErrorOptions {
-  cause?: Error;
-}
-
 /**
  * This exception is thrown when a request fails.
  */

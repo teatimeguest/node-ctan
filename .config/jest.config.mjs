@@ -10,7 +10,7 @@ const config = {
   coveragePathIgnorePatterns: ['<rootDir>/src/fetch'],
   globals: {
     'ts-jest': {
-      compiler: 'ttypescript',
+      compiler: "ttypescript",
       tsconfig: '<rootDir>/tsconfig.tests.json',
     },
   },

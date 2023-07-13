@@ -8,11 +8,11 @@ import { Client as ClientV1_3 } from '#/json/v1_3/client';
 import { Client as ClientV2_0 } from '#/json/v2_0/client';
 
 export class Client extends ClientBase {
-  #v1_0?: ClientV1_0;
-  #v1_1?: ClientV1_1;
-  #v1_2?: ClientV1_2;
-  #v1_3?: ClientV1_3;
-  #v2_0?: ClientV2_0;
+  #v1_0: ClientV1_0 | undefined;
+  #v1_1: ClientV1_1 | undefined;
+  #v1_2: ClientV1_2 | undefined;
+  #v1_3: ClientV1_3 | undefined;
+  #v2_0: ClientV2_0 | undefined;
 
   /**
    * @param config - Default configuration for this client instance.

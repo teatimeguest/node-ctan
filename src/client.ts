@@ -6,7 +6,7 @@ import { Client as ClientJson } from '#/json/client';
  * Client for CTAN APIs.
  */
 export class Client extends ClientBase {
-  #json?: ClientJson;
+  #json: ClientJson | undefined;
 
   /**
    * @param config - Default configuration for this client instance.

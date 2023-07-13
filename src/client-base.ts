@@ -65,7 +65,7 @@ export abstract class ClientBase {
 }
 
 class Validator {
-  #ajv?: Ajv;
+  #ajv: Ajv | undefined;
 
   validate<Response>(
     schema: Readonly<JSONSchemaType<Response>>,
